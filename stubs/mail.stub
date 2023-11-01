@@ -1,6 +1,4 @@
-<?php
-
-namespace {{ namespace }};
+<?php namespace {{ namespace }};
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -18,7 +16,7 @@ class {{ class }} extends Mailable
      */
     public function __construct()
     {
-        //
+        #
     }
 
     /**
@@ -26,9 +24,7 @@ class {{ class }} extends Mailable
      */
     public function envelope(): Envelope
     {
-        return new Envelope(
-            subject: '{{ subject }}',
-        );
+        return new Envelope( subject: "{{ subject }}" );
     }
 
     /**
@@ -36,9 +32,7 @@ class {{ class }} extends Mailable
      */
     public function content(): Content
     {
-        return new Content(
-            view: 'view.name',
-        );
+        return new Content( view: "view.name" );
     }
 
     /**

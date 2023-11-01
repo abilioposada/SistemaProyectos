@@ -1,6 +1,4 @@
-<?php
-
-namespace {{ namespace }};
+<?php namespace {{ namespace }};
 
 use Closure;
 use Illuminate\View\Component;
@@ -13,7 +11,7 @@ class {{ class }} extends Component
      */
     public function __construct()
     {
-        //
+        #
     }
 
     /**

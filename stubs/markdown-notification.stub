@@ -1,6 +1,4 @@
-<?php
-
-namespace {{ namespace }};
+<?php namespace {{ namespace }};
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -16,7 +14,7 @@ class {{ class }} extends Notification
      */
     public function __construct()
     {
-        //
+        #
     }
 
     /**
@@ -24,17 +22,17 @@ class {{ class }} extends Notification
      *
      * @return array<int, string>
      */
-    public function via(object $notifiable): array
+    public function via( object $notifiable ): array
     {
-        return ['mail'];
+        return [ "mail" ];
     }
 
     /**
      * Get the mail representation of the notification.
      */
-    public function toMail(object $notifiable): MailMessage
+    public function toMail( object $notifiable ): MailMessage
     {
-        return (new MailMessage)->markdown('{{ view }}');
+        return ( new MailMessage )->markdown( "{{ view }}" );
     }
 
     /**
@@ -42,10 +40,8 @@ class {{ class }} extends Notification
      *
      * @return array<string, mixed>
      */
-    public function toArray(object $notifiable): array
+    public function toArray( object $notifiable ): array
     {
-        return [
-            //
-        ];
+        return [];
     }
 }

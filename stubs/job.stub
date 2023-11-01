@@ -1,6 +1,4 @@
-<?php
-
-namespace {{ namespace }};
+<?php namespace {{ namespace }};
 
 use Illuminate\Foundation\Bus\Dispatchable;
 
@@ -13,7 +11,7 @@ class {{ class }}
      */
     public function __construct()
     {
-        //
+        #
     }
 
     /**
@@ -21,6 +19,6 @@ class {{ class }}
      */
     public function handle(): void
     {
-        //
+        #
     }
 }
