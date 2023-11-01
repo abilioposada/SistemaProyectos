@@ -14,6 +14,25 @@ class ProyectoFactory extends Factory
      */
     public function definition(): array
     {
-        return [];
+        # Hacer cálculos
+        $montoPlanificado   = $this->faker->randomFloat( $nbMaxDecimals = 2, $min = 0, $max = 1000000 );
+        $montoPatrocinado   = $this->faker->randomFloat( $nbMaxDecimals = 2, $min = 0, $max = $montoPlanificado );
+        $montoFondosPropios = $montoPlanificado - $montoPatrocinado;
+
+        # Generar data falsa
+        return [
+            "nombreProyecto" => ucfirst( $this->faker->words( $nb = 3, $asText = true ) ),
+            "fuenteFondos"   => $this->faker->randomElement( [
+                "empleo",
+                "prestamo",
+                "ahorro",
+                "bienes raíces",
+                "alquiler",
+                "herencia",
+            ] ),
+            "montoPlanificado"   => $montoPlanificado,
+            "montoPatrocinado"   => $montoPatrocinado,
+            "montoFondosPropios" => $montoFondosPropios,
+        ];
     }
 }
