@@ -6,4 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 class Proyecto extends Model
 {
     use HasFactory;
+
+    # Mass assignment
+    protected $guarded = [];
 }
