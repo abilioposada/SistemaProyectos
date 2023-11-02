@@ -23,7 +23,7 @@ class ProyectoFactory extends Factory
         return [
             "nombreProyecto" => ucfirst( $this->faker->words( $nb = 3, $asText = true ) ),
 
-            "fuenteFondos"   => $this->faker->randomElement( [
+            "fuenteFondos" => $this->faker->randomElement( [
                 "empleo",
                 "prestamo",
                 "ahorro",

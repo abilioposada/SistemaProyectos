@@ -22,7 +22,7 @@ class StoreProyectoRequest extends FormRequest
     {
         return [
             "nombreProyecto" => [ "bail", "required", "string", "between:3,255" ],
-            
+
             "fuenteFondos" => Rule::in( [
                 "empleo",
                 "prestamo",
