@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get( '/', function () {
-    return view( 'welcome' );
-} );
+Route::get( '/', fn () => view( "bienvenida" ) );
+
+Route::resource( "proyectos", \App\Http\Controllers\ProyectoController::class );
