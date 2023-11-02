@@ -22,14 +22,16 @@ class ProyectoFactory extends Factory
         # Generar data falsa
         return [
             "nombreProyecto" => ucfirst( $this->faker->words( $nb = 3, $asText = true ) ),
+
             "fuenteFondos"   => $this->faker->randomElement( [
                 "empleo",
                 "prestamo",
                 "ahorro",
-                "bienes raíces",
+                "bienes raices",
                 "alquiler",
                 "herencia",
             ] ),
+
             "montoPlanificado"   => $montoPlanificado,
             "montoPatrocinado"   => $montoPatrocinado,
             "montoFondosPropios" => $montoFondosPropios,

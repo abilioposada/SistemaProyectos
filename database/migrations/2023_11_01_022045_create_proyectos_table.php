@@ -20,7 +20,7 @@ return new class extends Migration
                 "empleo",
                 "prestamo",
                 "ahorro",
-                "bienes raíces",
+                "bienes raices",
                 "alquiler",
                 "herencia",
             ] )
