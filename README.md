@@ -19,20 +19,14 @@ git clone https://github.com/abilioposada/SistemaProyectos.git
 
 cd SistemaProyectos
 
+php -r "file_exists( '.env' ) || copy( '.env.example', '.env' );"
+
 composer install
 
 php artisan key:generate
 ```
 
-Set up the `.env` file with your own credentials information and make sure to create the database in your DBMS
-
-Copiar el archivo de entorno `.env`
-
-```php
-php -r "file_exists( '.env' ) || copy( '.env.example', '.env' );"
-```
-
-Configurar el nuevo archivo con la información de sus credenciales y asegurarse de crear la base de datos en su Sistema Gestor de Bases de Datos SGBD
+Configurar el archivo de entorno `.env` con la información de sus credenciales y asegurarse de crear la base de datos en su Sistema Gestor de Bases de Datos SGBD
 
 ```
 DB_CONNECTION=mysql
